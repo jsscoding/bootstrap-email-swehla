@@ -20,44 +20,44 @@
   </head>
   <body>
     <!-- Header based on example from https://getbootstrap.com/docs/5.3/examples/headers/ -->
-    <!-- <header class="d-none d-md-block"> -->
-      <div class="container-fluid py-3 gap-3 d-flex justify-content-between">
-        <!-- Visible xs & s -->
-        <div class="d-flex d-md-none dropdown">
-          <a
-            href="#"
-            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fa-solid fa-bars fa-xl"></i>
-            <!-- <svg width="20" height="32" width="10"><use xlink:href="#bootstrap"></use></svg> -->
-          </a>
-          <ul class="dropdown-menu text-small shadow">
-            <li><a class="dropdown-item" href="#">New Mail</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#" aria-current="page">Inbox</a></li>
-            <li><a class="dropdown-item" href="#">Sent</a></li>
-            <li><a class="dropdown-item" href="#">Trash</a></li>
-            <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
-          </ul>
-        </div>
-        <!-- Visible md + -->
-        <div class="btn-group d-none d-md-flex">
-            TOP FARMER WEBMAIL
-        </div>
-        <div class="d-flex w-100 my-search">
-          <form class="w-100 me-3 " role="search">
-            <input
-              type="search"
-              class="form-control"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </form>
-        </div>
+    
+    <div class="container-fluid py-3 gap-3 d-flex justify-content-between my-header">
+      <!-- Visible xs & s -->
+      <div class="d-flex d-md-none dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars fa-xl"></i>
+          <!-- <svg width="20" height="32" width="10"><use xlink:href="#bootstrap"></use></svg> -->
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item" href="#">New Mail</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#" aria-current="page">Inbox</a></li>
+          <li><a class="dropdown-item" href="#">Sent</a></li>
+          <li><a class="dropdown-item" href="#">Trash</a></li>
+          <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
+        </ul>
       </div>
-    <!-- </header> -->
+      <!-- Visible md + -->
+      <div class="btn-group d-none d-md-flex ">
+          TOP FARMER WEBMAIL
+      </div>
+      <div class="d-flex w-100 my-search">
+        <form class="w-100 me-3 " role="search">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+        </form>
+      </div>
+    </div>
+    
     
     <div class="container-fluid d-flex my-container flex-wrap">
       <div class="col-md-4 col-lg-2 d-none d-md-flex my-col my-menu">
@@ -101,7 +101,7 @@
         </div>
        </div>
       <div class="my-col col-md-12 col-lg-5">
-        <div class="card mx-3 mb-2 px-0 d-none d-md-flex">
+        <div class="card m-3 mb-2 px-0 d-none d-md-flex">
           <div class="card-header d-flex justify-content-between align-items-center full-email">
             <span><b>From:</b> Farmer Joe</span>
             <button class="btn btn-outline-secondary reply" type="button" id="button-addon2">REPLY</button>
@@ -111,7 +111,7 @@
           <li class="list-group-item full-email">The quick brown fox jumps over the lazy dog and runs straight to the hen house for dinner!! Be sure to keep an eye out tonight for any foxes, so they don't do any jumping and feasting!!</li>
           </ul>
         </div>
-        <div class="my-col d-none d-lg-grid col-lg-12">
+        <div class="px-3 d-none d-lg-grid col-lg-12">
           <div class="input-group mt-3">
             <span class="input-group-text" id="inputGroup-sizing-default">To:</span>
             <input type="text" class="form-control new-email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">

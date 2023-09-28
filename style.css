@@ -9,6 +9,7 @@
 
 .my-menu {
     max-width: 150px;
+    background: #DCF2C9;
 }
 
 
@@ -37,10 +38,19 @@ li.full-email{
     background: #F2C8D5;
 }
 
+.my-header {
+    background: #18397F;
+    color: white;
+}
+
+i.fa-solid{
+    color: white;
+}
+
 /* .my-container {
     border: 10px solid green;
 } */
 
-.my-col {
-    border: 3px solid blue;
-}
+/* .my-col {
+    border: 3px solid #18397F;
+} */
