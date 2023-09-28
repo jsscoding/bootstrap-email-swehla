@@ -1,0 +1,46 @@
+.card{
+    min-width: 250px;
+}
+
+.my-search{
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.my-menu {
+    max-width: 150px;
+}
+
+
+div.email-list{
+    background: #FFDD98;
+}
+
+li.email-list{
+    background: #FFF0D3;
+}
+
+div.full-email{
+    background: #6F85AF;
+}
+
+li.full-email{
+    background: #B6C1D7;
+}
+
+.reply {
+    background: #B6C1D7;
+    --bs-btn-color: black;
+}
+
+.new-email{
+    background: #F2C8D5;
+}
+
+/* .my-container {
+    border: 10px solid green;
+} */
+
+.my-col {
+    border: 3px solid blue;
+}
