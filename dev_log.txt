@@ -1,6 +1,36 @@
-9/20 8:30-10P, Researching and creating wireframes in Figma
-9/21 5-6P, creating wireframes in Figma
-9/21 7:30-9P, finished & submitted wireframe, researching BSG
-9/24 2:45-4:15P, researching BSG
-9/24 4-10P, researching BSG, started on rough draft of BSG email assignment, troubleshot issues with stylesheet
-9/25
+9/20 8:30-10P
+Researched and created wireframes in Figma
+
+9/21 5-6P
+created wireframes in Figma
+
+9/21 7:30-9P
+finished & submitted wireframe
+researched BSG
+
+9/24 2:45-4:15P
+researched BSG
+
+9/24 4-10P
+researched BSG
+started on rough draft of BSG email assignment
+ran issues with formatting due to putting MY stylesheet BEFORE the BS stylesheet in the head
+mostly completed mobile screen
+
+9/25 3-5:30P
+completed BSG mobile screen
+researched BSG to build tablet screen
+discovered how to hide elements based on screen size using the display setting
+began working on medium screen setup
+
+9/26 6-7:15P
+Met with Study Group
+
+9/26 7:15-10:45P
+Reviewed BS website for additional ideas to complete layouts
+Finished rough drafts for mobile, tablet and desktop views
+
+9/27 5-5:30P
+Finalizing rough draft
+Pushed rough draft to repo
+
