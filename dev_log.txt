@@ -34,3 +34,18 @@ Finished rough drafts for mobile, tablet and desktop views
 Finalizing rough draft
 Pushed rough draft to repo
 
+9/27 5:30-7:30P
+Presentation on CSS art
+Class discussion
+Code Review
+Commented code for BSG project
+
+9/28 5:30-6P
+Working on Header
+
+9/28 6-7P
+Study Group
+
+9/28 8-9:30P
+Changed menu
+Made tweaks to layout
