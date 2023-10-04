@@ -49,3 +49,19 @@ Study Group
 9/28 8-9:30P
 Changed menu
 Made tweaks to layout
+
+10/2 5-5:30P
+Finalizing BSG email page
+
+10/3 5-6P
+Attended office hours
+Finalizing BSG email page
+
+10/3 6-7P
+Study group
+Finalizing BSG email page
+
+10/3 7-9P
+Finalizing BSG email page
+Updating dev log
+Committing to Github

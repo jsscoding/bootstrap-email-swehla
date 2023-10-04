@@ -18,35 +18,74 @@ li.full-email{
     background: #B6C1D7;
 }
 
-.card{
-    min-width: 250px;
+.btn {
+    background: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.branding{
+    min-width: fit-content;
+}
+
+.active-email{
+    box-shadow: 7px 7px 0 rgba(60, 88, 147, 1);
+    margin-bottom: 100px;
+}
+
+.body {
+    background: #DCF2C9;
+    height: 1000px;
+}
+
+.compose{
+    --bs-btn-hover-bg: #E488A5;
+    --bs-btn-bg: #F2C8D5;
+    border: none;
+    color: #18397F;
+    display: flex;
+    justify-content: center;
 }
 
 .count {
     --bs-btn-font-size: 1em;
     --bs-btn-line-height: 1em;
     --bs-btn-disabled-bg: #FFF0D3;
-    color: black;
+    --bs-btn-disabled-color: black;
 }
 
-.list-group-item {
-   
+.scrollable{
+    height: calc(100vh - 90px);
 }
 
-/* .my-col {
-    border: 3px solid #18397F;
-} */
+.email-list-col {
+    height:100%;
+}
+
+/* If the screen size is medium, height is fixed */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .scrollable{
+        height: 500px;
+    }
+}
+
+.footer {
+    height: 1000px;
+    background: #DCF2C9;
+}
+
+.my-container {
+    background: #DCF2C9;
+}
 
 .my-header {
     background: #18397F;
     color: white;
+    min-width: 500px;
 }
 
 .my-menu {
     width: 250px;
     margin-top: 10px;
-    /* padding: 100px; */
-    /* background: #DCF2C9; */
     border: none;
 }
 
@@ -60,12 +99,6 @@ li.full-email{
 }
 
 .selected {
-    /* background: var(--bs-list-group-active-bg); */
     background: #0d6efd;
     color: white;
-}
-
-.test {
-    /* height: 100%; */
-    background: #DCF2C9;
 }

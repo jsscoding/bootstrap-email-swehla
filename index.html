@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <title>BSG Project</title>
+    <title>Welcome to Happy Farmer Webmail</title>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
@@ -18,10 +18,12 @@
     />
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
-  <body>
-<!-- Header based on example from https://getbootstrap.com/docs/5.3/examples/headers/ -->
-    <div class="container-fluid py-3 gap-3 d-flex justify-content-between my-header">
-<!-- Hamburger menu for mobile -->
+  <body class="overflow-hidden">
+    <!-- Header based on example from https://getbootstrap.com/docs/5.3/examples/headers/ -->
+    <div
+      class="container-fluid py-3 gap-3 d-flex sticky-top justify-content-between my-header"
+    >
+      <!-- Hamburger menu for mobile -->
       <div class="d-flex d-md-none dropdown">
         <a
           href="#"
@@ -32,131 +34,327 @@
           <i class="fa-solid fa-bars fa-xl"></i>
         </a>
         <ul class="dropdown-menu text-small shadow">
-          <li><a class="dropdown-item" href="#">New Mail</a></li>
+          <!-- <li><a class="dropdown-item" href="#">New Mail</a></li> -->
+          <li>
+            <button
+              type="button"
+              class="btn btn-primary compose"
+              data-bs-toggle="modal"
+              data-bs-target="#newEmailModal"
+            >
+              New Mail
+            </button>
+          </li>
           <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="#" aria-current="page">Inbox</a></li>
+          <li>
+            <a class="dropdown-item" href="#" aria-current="page">Inbox</a>
+          </li>
+          <li><a class="dropdown-item" href="#">Spam</a></li>
           <li><a class="dropdown-item" href="#">Sent</a></li>
           <li><a class="dropdown-item" href="#">Trash</a></li>
           <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
         </ul>
       </div>
-<!-- Branding for tablet & desktop -->
-      <div class="btn-group d-none d-md-flex align-items-center w-100">
-        <i class="fa-solid fa-cow fa-2xl pe-3"></i>
-          <h2>TOP FARMER WEBMAIL</h2>
+
+      <!-- Branding for tablet & desktop -->
+      <div class="btn-group d-none d-md-flex align-items-center branding">
+        <i class="fa-solid fa-cow fa-beat-fade fa-2xl pe-3 pb-2"></i>
+        <h2>HAPPY FARMERS WEBMAIL</h2>
+        <!-- <i class="fa-solid fa-church fa-beat-fade fa-2xl pe-3 pb-2"></i>
+        <h2>CHURCH FATHERS WEBMAIL</h2> -->
       </div>
-<!-- Search bar -->
-        <form class="me-3 w-100" role="search">
-          <input
-            type="search"
-            class="form-control"
-            placeholder="Search..."
-            aria-label="Search"
-          />
-        </form>
+      <!-- Search bar -->
+      <form class="me-3 w-100" role="search">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search..."
+          aria-label="Search"
+        />
+      </form>
     </div>
-    <div class="container-fluid d-flex flex-wrap test">
-<!-- COLUMN 2 - Folder menu for tablet & desktop -->
-      <div class="col-md-4 col-lg-1 d-none d-md-flex my-col my-menu">
-          <!-- <nav class="nav nav-pills nav-fill flex-column">
-            <a class="nav-link" href="#">NEW MAIL</a>
-            <hr class="nav-link-divider" />
-            <a class="nav-link" href="#">INBOX</a>
-            <a class="nav-link" href="#">SENT</a>
-            <a class="nav-link" href="#">TRASH</a>
-            <a class="nav-link" href="#">MISCELLANEOUS</a>
-          </nav> -->
-        <div class="list-group mt-3">
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-center">
-              <h5 class="mb-1">COMPOSE NEW MAIL</h5>
+    <!-- Page Contents -->
+    <div class="container-fluid d-flex flex-wrap my-container w-100">
+      <div class="row">
+        <!-- COLUMN 2 - Folder menu for tablet & desktop -->
+        <div class="col-md-4 col-lg-1 d-none d-md-flex my-menu">
+          <div class="list-group mt-3">
+            <!-- Compose Mail Modal -->
+            <button
+              type="button"
+              class="btn btn-primary d-flex d-lg-none justify-content-center compose"
+              data-bs-toggle="modal"
+              data-bs-target="#newEmailModal"
+              data-bs-whatever="@mdo"
+            >
+              COMPOSE NEW MAIL
+            </button>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action selected my-menu"
+              aria-current="true"
+            >
+              <!-- Folder List -->
+              <div class="d-flex w-100 justify-content-between">
+                <h5>INBOX</h5>
+                <button class="btn btn-primary count" disabled>4</button>
+              </div>
+              <!-- <p>Some placeholder content in a paragraph.</p>
+              <small class="text-body-secondary">And some muted small print.</small> -->
+            </a>
+            <!-- Inbox sub-menu -->
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h7>Friends</h7>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h7>Suppliers</h7>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action my-menu">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>SPAM</h5>
+                <button class="btn btn-primary count" disabled>30</button>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action my-menu">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>SENT</h5>
+                <!-- <button class="btn btn-primary count" disabled>4</button> -->
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action my-menu">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>TRASH</h5>
+                <button class="btn btn-primary count" disabled>6</button>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action my-menu">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>MISCELLANEOUS</h5>
+                <button class="btn btn-primary count" disabled>2</button>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- COLUMN 1 - List of emails -->
+        <div class="col col-md col-lg-4 scrollable">
+          <div class="email-list-col overflow-y-scroll">
+            <div class="card mx-3 mt-2 mb-2 px-0 active-email">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
             </div>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action selected my-menu" aria-current="true">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">INBOX</h5>
-              <button class="btn btn-primary count" disabled>4</button>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
             </div>
-            <!-- <p class="mb-1">Some placeholder content in a paragraph.</p>
-            <small class="text-body-secondary">And some muted small print.</small> -->
-          </a>
-          <a href="#" class="list-group-item list-group-item-action my-menu">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">SENT</h5>
-              <button class="btn btn-primary count" disabled>4</button>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
             </div>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action my-menu">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">TRASH</h5>
-              <button class="btn btn-primary count" disabled>4</button>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
             </div>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action my-menu">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">MISCELLANEOUS</h5>
-              <button class="btn btn-primary count" disabled>4</button>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
             </div>
-          </a>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
+            </div>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
+            </div>
+            <div class="card mx-3 mb-2 px-0">
+              <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
+              <ul class="list-group">
+                <li class="list-group-item email-list">
+                  <b>Subject:</b> Foxes
+                </li>
+                <li class="list-group-item email-list">
+                  The quick brown fox jumps over the lazy dog . . .
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- COLUMN 3 - Open Email and Reply -->
+        <div class="col-md-12 col-lg">
+          <!-- Open email for tablet & desktop-->
+          <div class="card m-3 mb-2 px-0 d-none d-md-flex">
+            <div
+              class="card-header d-flex justify-content-between align-items-center full-email"
+            >
+              <span><b>From:</b> Farmer Joe</span>
+              <button
+              type="button"
+              class="btn btn-primary d-flex justify-content-center reply"
+              data-bs-toggle="modal"
+              data-bs-target="#newEmailModal"
+              data-bs-whatever="@mdo"
+              >
+              REPLY
+              </button>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item full-email"><b>Subject:</b> Foxes</li>
+              <li class="list-group-item full-email">
+                The quick brown fox jumps over the lazy dog and runs straight to
+                the hen house for dinner!! Be sure to keep an eye out tonight
+                for any foxes, so they don't do any jumping and feasting!!
+              </li>
+            </ul>
+          </div>
+          <!-- Reply window for desktop -->
+          <div class="px-3 col-lg-12 d-none d-lg-grid">
+            <div class="input-group mt-3">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >To:</span
+              >
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                Send
+              </button>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Subject:</span
+              >
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control new-email"
+                rows="5"
+                id="comment"
+              ></textarea>
+            </div>
+          </div>
         </div>
       </div>
-<!-- COLUMN 1 - List of emails -->
-      <div class="col col-md col-lg-4 my-col email-list-col">
-        <div class="card mx-3 mb-2 px-0">
-          <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
-          <ul class="list-group">
-          <li class="list-group-item email-list"><b>Subject:</b> Foxes</li>
-          <li class="list-group-item email-list">The quick brown fox jumps over the lazy dog . . .</li>
-          </ul>
-        </div>
-        <div class="card mx-3 mb-2 px-0">
-          <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
-          <ul class="list-group">
-          <li class="list-group-item email-list"><b>Subject:</b> Foxes</li>
-          <li class="list-group-item email-list">The quick brown fox jumps over the lazy dog . . .</li>
-          </ul>
-        </div>
-        <div class="card mx-3 mb-2 px-0">
-          <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
-          <ul class="list-group">
-          <li class="list-group-item email-list"><b>Subject:</b> Foxes</li>
-          <li class="list-group-item email-list">The quick brown fox jumps over the lazy dog . . .</li>
-          </ul>
-        </div>
-        <div class="card mx-3 mb-2 px-0">
-          <div class="card-header email-list"><b>From:</b> Farmer Joe</div>
-          <ul class="list-group">
-          <li class="list-group-item email-list"><b>Subject:</b> Foxes</li>
-          <li class="list-group-item email-list">The quick brown fox jumps over the lazy dog . . .</li>
-          </ul>
-        </div>
-       </div>
-<!-- COLUMN 3 - Open Email and Reply -->
-      <div class="col-md-12 col-lg my-col">
-<!-- Open email for tablet & desktop-->
-        <div class="card m-3 mb-2 px-0 d-none d-md-flex">
-          <div class="card-header d-flex justify-content-between align-items-center full-email">
-            <span><b>From:</b> Farmer Joe</span>
-            <button class="btn btn-outline-secondary reply" type="button" id="button-addon2">REPLY</button>
+    </div>
+    <div class="row footer"></div>
+    <!-- New Email Modal -->
+    <div
+      class="modal fade"
+      id="newEmailModal"
+      aria-labelledby="newEmailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="newEmailModalLabel">New message</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <ul class="list-group list-group-flush">
-          <li class="list-group-item full-email"><b>Subject:</b> Foxes</li>
-          <li class="list-group-item full-email">The quick brown fox jumps over the lazy dog and runs straight to the hen house for dinner!! Be sure to keep an eye out tonight for any foxes, so they don't do any jumping and feasting!!</li>
-          </ul>
-        </div>
-<!-- Reply window for desktop -->
-        <div class="px-3 col-lg-12 d-none d-lg-grid">
-          <div class="input-group mt-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">To:</span>
-            <input type="text" class="form-control new-email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">To:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Input Email Address"
+                  required=""
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Message:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
           </div>
-          <div class="input-group">
-            <span class="input-group-text" id="inputGroup-sizing-default">Subject:</span>
-            <input type="text" class="form-control new-email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control new-email" rows="5" id="comment"></textarea>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Send message
+            </button>
           </div>
         </div>
       </div>
@@ -165,7 +363,11 @@
       src="https://kit.fontawesome.com/ea844b0ea6.js"
       crossorigin="anonymous"
     ></script>
-<!--Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
